@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
 
 # 1
-s.platform = :is
+s.platform = :ios
 s.ios.deployment_target = '12.0'
 s.name = "Login"
 s.summary = "Login screen"
 s.requires_arc = true
 
 # 2
-s.version = "0.1.0"
+s.version = "0.1.1"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
