@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Log In-->
+        <scene sceneID="53g-WJ-Ah2">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" id="jeW-au-qrO" customClass="SignInViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ogc-9G-Qb9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wb1-cE-6Cb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-YI-DtP">
+                                        <rect key="frame" x="5" y="25" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Mv6-SM-128"/>
+                                            <constraint firstAttribute="height" constant="30" id="X4E-hS-cG6"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" image="backArrow"/>
+                                        <connections>
+                                            <action selector="closeAct:" destination="jeW-au-qrO" eventType="touchUpInside" id="aDj-bV-WRp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-aa-lM9">
+                                        <rect key="frame" x="194" y="31.5" width="42" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artboard" translatesAutoresizingMaskIntoConstraints="NO" id="khW-1o-D9g">
+                                        <rect key="frame" x="112" y="89" width="205" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="RNV-0b-xas"/>
+                                            <constraint firstAttribute="width" constant="205" id="Sui-Dd-emg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZX-0L-pQW" customClass="MDCOutlinedTextField">
+                                        <rect key="frame" x="20" y="194" width="374" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="5DI-M8-WZa"/>
+                                        </constraints>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                <color key="value" name="textfieldBorderColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minLength">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="45"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="txtAction_EmailChangeValue:" destination="jeW-au-qrO" eventType="editingChanged" id="k0D-If-Gra"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYm-Xs-UHG" customClass="MDCOutlinedTextField">
+                                        <rect key="frame" x="20" y="274" width="374" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="RJM-Z1-UMm"/>
+                                        </constraints>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                <color key="value" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="txtAction_password:" destination="jeW-au-qrO" eventType="editingChanged" id="zNZ-RR-uJ4"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osa-Xd-8X8">
+                                        <rect key="frame" x="20" y="364" width="374" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="9YF-xR-V3s"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Forgot password?">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" metaFont="system"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="forgotPasswordAction:" destination="jeW-au-qrO" eventType="touchUpInside" id="kOY-Pw-HqD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-7a-BRW">
+                                        <rect key="frame" x="20" y="412" width="374" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="ckf-K2-MAV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                <color key="value" name="AccentColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="AccentColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signInAction:" destination="jeW-au-qrO" eventType="touchUpInside" id="HSR-Vl-Vcp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHj-pG-Zbd">
+                                        <rect key="frame" x="196" y="477" width="22" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="15"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-tN-mg1">
+                                        <rect key="frame" x="20" y="514.5" width="374" height="45"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDx-ar-Lu2">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnv-IZ-yDY">
+                                                <rect key="frame" x="128" y="0.0" width="118" height="45"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" image="google"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                        <color key="value" name="AccentColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="AccentColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="googleClick:" destination="jeW-au-qrO" eventType="touchUpInside" id="chw-I2-noQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ec8-yR-YfN">
+                                                <rect key="frame" x="256" y="0.0" width="118" height="45"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" image="fbIcon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor1">
+                                                        <color key="value" name="AccentColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="AccentColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="fbClicked:" destination="jeW-au-qrO" eventType="touchUpInside" id="efu-Lq-5hc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="yiI-O4-WnP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-GK-hYF">
+                                        <rect key="frame" x="20" y="778" width="374" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="VDz-nk-ZUq"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Don’t have an account yet? ">
+                                                    <attributes>
+                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="29.649999618530273">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Sign up">
+                                                    <attributes>
+                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="29.649999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="29.649999618530273">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="createAnAccountAct:" destination="jeW-au-qrO" eventType="touchUpInside" id="pu5-4d-w7o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QZX-0L-pQW" firstAttribute="leading" secondItem="Wb1-cE-6Cb" secondAttribute="leading" constant="20" id="4tH-dl-eJg"/>
+                                    <constraint firstItem="hYs-aa-lM9" firstAttribute="centerX" secondItem="Wb1-cE-6Cb" secondAttribute="centerX" constant="7.75" id="5nk-tT-QbE"/>
+                                    <constraint firstItem="GYm-Xs-UHG" firstAttribute="trailing" secondItem="QZX-0L-pQW" secondAttribute="trailing" id="Awv-Gs-SNG"/>
+                                    <constraint firstItem="QhC-tN-mg1" firstAttribute="leading" secondItem="Afe-7a-BRW" secondAttribute="leading" id="KBa-vY-eP4"/>
+                                    <constraint firstItem="Afe-7a-BRW" firstAttribute="trailing" secondItem="GYm-Xs-UHG" secondAttribute="trailing" id="KMr-dY-1ho"/>
+                                    <constraint firstItem="hYs-aa-lM9" firstAttribute="centerY" secondItem="o3R-YI-DtP" secondAttribute="centerY" id="LkJ-tz-qCO"/>
+                                    <constraint firstItem="GYm-Xs-UHG" firstAttribute="leading" secondItem="QZX-0L-pQW" secondAttribute="leading" id="NTj-CB-fOq"/>
+                                    <constraint firstItem="osa-Xd-8X8" firstAttribute="trailing" secondItem="GYm-Xs-UHG" secondAttribute="trailing" id="Psa-qk-ouc"/>
+                                    <constraint firstItem="hfe-GK-hYF" firstAttribute="leading" secondItem="Wb1-cE-6Cb" secondAttribute="leading" constant="20" id="SE4-17-kDa"/>
+                                    <constraint firstItem="osa-Xd-8X8" firstAttribute="top" secondItem="GYm-Xs-UHG" secondAttribute="bottom" constant="34" id="TRr-fK-scM"/>
+                                    <constraint firstItem="osa-Xd-8X8" firstAttribute="leading" secondItem="GYm-Xs-UHG" secondAttribute="leading" id="V13-rs-XJ0"/>
+                                    <constraint firstItem="o3R-YI-DtP" firstAttribute="top" secondItem="Wb1-cE-6Cb" secondAttribute="top" constant="25" id="W8Y-Sb-wHX"/>
+                                    <constraint firstItem="XHj-pG-Zbd" firstAttribute="centerX" secondItem="Afe-7a-BRW" secondAttribute="centerX" id="WAz-63-gxe"/>
+                                    <constraint firstItem="QhC-tN-mg1" firstAttribute="top" secondItem="XHj-pG-Zbd" secondAttribute="bottom" constant="20" id="WtF-Xb-qgx"/>
+                                    <constraint firstItem="Afe-7a-BRW" firstAttribute="leading" secondItem="GYm-Xs-UHG" secondAttribute="leading" id="ZZQ-Jt-KJb"/>
+                                    <constraint firstAttribute="trailing" secondItem="QZX-0L-pQW" secondAttribute="trailing" constant="20" id="cFH-jm-fhZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="hfe-GK-hYF" secondAttribute="trailing" constant="20" id="cnb-4P-SVB"/>
+                                    <constraint firstItem="o3R-YI-DtP" firstAttribute="leading" secondItem="Wb1-cE-6Cb" secondAttribute="leading" constant="5" id="ku9-hs-kzi"/>
+                                    <constraint firstItem="GYm-Xs-UHG" firstAttribute="top" secondItem="QZX-0L-pQW" secondAttribute="bottom" constant="24" id="kvj-Vr-1AT"/>
+                                    <constraint firstItem="QZX-0L-pQW" firstAttribute="top" secondItem="khW-1o-D9g" secondAttribute="bottom" constant="40" id="lLQ-qA-sii"/>
+                                    <constraint firstAttribute="bottom" secondItem="hfe-GK-hYF" secondAttribute="bottom" constant="10" id="mCI-FW-yij"/>
+                                    <constraint firstItem="khW-1o-D9g" firstAttribute="top" secondItem="hYs-aa-lM9" secondAttribute="bottom" constant="40" id="o6z-aV-KQQ"/>
+                                    <constraint firstItem="XHj-pG-Zbd" firstAttribute="top" secondItem="Afe-7a-BRW" secondAttribute="bottom" constant="20" id="ozj-WJ-J0d"/>
+                                    <constraint firstItem="khW-1o-D9g" firstAttribute="centerX" secondItem="Wb1-cE-6Cb" secondAttribute="centerX" constant="7.5" id="q5E-PN-E3D"/>
+                                    <constraint firstItem="Afe-7a-BRW" firstAttribute="top" secondItem="osa-Xd-8X8" secondAttribute="bottom" constant="30" id="v1g-yE-ao0"/>
+                                    <constraint firstItem="QhC-tN-mg1" firstAttribute="trailing" secondItem="Afe-7a-BRW" secondAttribute="trailing" id="w6l-ze-IQ4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x7G-nS-mIT"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wb1-cE-6Cb" firstAttribute="top" secondItem="x7G-nS-mIT" secondAttribute="top" id="CHL-l1-7ON"/>
+                            <constraint firstItem="Wb1-cE-6Cb" firstAttribute="trailing" secondItem="x7G-nS-mIT" secondAttribute="trailing" id="GTw-Qt-uTl"/>
+                            <constraint firstItem="Wb1-cE-6Cb" firstAttribute="leading" secondItem="Ogc-9G-Qb9" secondAttribute="leading" id="Se2-6Q-o6y"/>
+                            <constraint firstItem="x7G-nS-mIT" firstAttribute="bottom" secondItem="Wb1-cE-6Cb" secondAttribute="bottom" id="fAS-pK-jfN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log In" id="t8k-fs-Yyq">
+                        <barButtonItem key="leftBarButtonItem" image="backArrow" id="ZvH-9h-DyN">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createAccountButton" destination="hfe-GK-hYF" id="mEn-kR-S3K"/>
+                        <outlet property="emailTextField" destination="QZX-0L-pQW" id="6aH-Cq-dKy"/>
+                        <outlet property="forgotPasswordBtn" destination="osa-Xd-8X8" id="aor-aD-fmc"/>
+                        <outlet property="passwordTextField" destination="GYm-Xs-UHG" id="x4a-Cj-DZW"/>
+                        <outlet property="signInButton" destination="Afe-7a-BRW" id="GJY-NM-Bml"/>
+                        <outlet property="viewAppleSignIn" destination="ZDx-ar-Lu2" id="DXc-hZ-wCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wx-hu-7qG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095" y="1799"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Artboard" width="205" height="62"/>
+        <image name="backArrow" width="24" height="24"/>
+        <image name="fbIcon" width="10" height="21"/>
+        <image name="google" width="20" height="22"/>
+        <namedColor name="AccentColor">
+            <color red="0.11372549019607843" green="0.11372549019607843" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textfieldBorderColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
