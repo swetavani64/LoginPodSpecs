@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 # 1
-s.platform = :ios
+s.platform = :is
 s.ios.deployment_target = '12.0'
 s.name = "Login"
 s.summary = "Login screen"
@@ -20,19 +20,19 @@ s.author = { "Sweta Vani" => "sweta.vani@brainvire.com" }
 s.homepage = "https://github.com/swetavani64/LoginPodSpecs"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => https://github.com/swetavani64/LoginPodSpecs.git", 
+s.source = { :git => "https://github.com/swetavani64/LoginPodSpecs.git", 
              :tag => "#{s.version}" }
 
 # 7
 s.framework = "UIKit"
-s.dependency 'Alamofire',
-s.dependency 'SVProgressHUD',
+s.dependency 'Alamofire'
+s.dependency 'SVProgressHUD'
 
 # 8
 s.source_files = "Login/**/*.{swift}"
 
 # 9
-s.resources = "Login/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+s.resources = "Login/**/*.{pdf,storyboard,xcassets}"
 
 # 10
 s.swift_version = "5"
